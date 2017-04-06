@@ -25,7 +25,8 @@ func main() {
 	jsonReq := []byte(fmt.Sprintf(`{"name":"%s", "title":"%s"`, requestBody.Name, requestBody.Title))
 	fmt.Println(string(jsonReq))
 
-	req, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonReq))
+	// req, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonReq))
+	req, err := http.NewRequest("POST", url, bytes.NewReader(jsonReq))
 
 	req.Header.Set("X-Custom-Header", "myvalue")
 	req.Header.Set("Content-Type", "application/json")
