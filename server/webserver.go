@@ -16,7 +16,7 @@ func readReq(responseWriter http.ResponseWriter, request *http.Request) {
 
 	fmt.Printf("read request.Body successfully:\n%v\n", string(data))
 
-	fmt.Fprintf(responseWriter, string("Success"))
+	fmt.Fprintf(responseWriter, string("Hello Naren"))
 }
 
 func main() {
