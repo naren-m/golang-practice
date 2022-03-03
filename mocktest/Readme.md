@@ -1,0 +1,1 @@
+gotests -w -all .
